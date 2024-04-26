@@ -1,0 +1,28 @@
+8051 Assembler           Version 1.00   07/01/123 09:42:14    Page 1
+D:\Dars\Term 4\Sakhtar\Bagheri\Project\ErfanBateni_400100792\Section 4's code.a51
+
+
+
+    1 0000              ORG 0H
+    2 0000              
+    3 0000 90FF00       MOV DPTR, #0FF00H;
+    4 0003 7800         MOV R0, #0;
+    5 0005 7400         MOV A, #0;
+    6 0007 C3           CLR C;
+    7 0008 02000B       LJMP $+3;
+    8 000B 04           INC A;
+    9 000C 25A0         ADD A, P2;
+   10 000E F9           MOV R1, A;
+   11 000F              
+   12 000F              LOOP:
+   13 000F                  MOVX @DPTR, R0;
+   14 000F A3               INC DPTR;
+   15 0010 08               INC R0;
+   16 0011 D9FC             DJNZ R1, LOOP;
+   17 0013              
+   18 0013              END
+
+Defined Symbols:
+
+Defined Labels:
+  LOOP                                      00000F  15
